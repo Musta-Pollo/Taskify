@@ -51,4 +51,22 @@ extension Date {
 
         return closestTime
     }
+    func deadlineDescription() -> String {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = self.isTimeSet ? .short : .none
+            return formatter.string(from: self)
+    }
+    
+    func formattedDate() -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "d.M.yyyy"
+            return dateFormatter.string(from: self)
+        }
+
+    func formattedTime() -> String {
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        return timeFormatter.string(from: self)
+    }
 }

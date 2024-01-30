@@ -10,7 +10,6 @@ import SwiftUI
 struct TodoEditView: View {
     @Binding var todo: Todo
     @EnvironmentObject var tasks: TasksStore
-    @State var hiddenDateTime : Date
 //    init(todo: Todo, tasks: TasksStore, hiddenDateTime: Date) {
 //        self.todo = todo
 //        self.tasks = tasks
@@ -28,6 +27,11 @@ struct TodoEditView: View {
                 if(todo.dateTime !=  nil){
                     TimePickerOptionalView("Select Time", prompt: "Add Time", selection: $todo.dateTime)
                 }
+            }
+            Section(header: Text("Note")) {
+                TextEditor(text: $todo.note)
+                   .frame(minHeight: 10 * 24, alignment: .leading) // Assuming 24pt per line
+                   .padding(4)
             }
         }
     }

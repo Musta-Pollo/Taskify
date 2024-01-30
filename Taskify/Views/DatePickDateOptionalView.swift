@@ -12,15 +12,15 @@ struct DatePickerOptional: View {
     let prompt: String
     let range: ClosedRange<Date>
     @Binding var date: Date?
-    @Binding var hiddenDate: Date
+    @State private var hiddenDate: Date
     @State private var showDate: Bool
 
-    init(_ label: String, prompt: String, in range: ClosedRange<Date> = Date()...Date(timeIntervalSinceNow: 31536000), selection: Binding<Date?>, hiddenDate: Binding<Date>) {
+    init(_ label: String, prompt: String, in range: ClosedRange<Date> = Date()...Date(timeIntervalSinceNow: 31536000), selection: Binding<Date?>) {
         self.label = label
         self.prompt = prompt
         self.range = range
         self._date = selection
-        self._hiddenDate = hiddenDate
+        self._hiddenDate = State(initialValue: selection.wrappedValue ?? Date())
         self._showDate = State(initialValue: selection.wrappedValue != nil)
     }
 
@@ -58,6 +58,15 @@ struct DatePickerOptional: View {
 //                    .background(RoundedRectangle(cornerRadius: 8).stroke())
                 }
             }
+        }
+        .onChange(of: date) { oldValue, newValue in
+                if newValue == nil {
+                    showDate = false
+                    hiddenDate = Date().settingHourAndMinuteToZero()
+                } else {
+                    showDate = true
+                    hiddenDate = newValue ?? Date()
+                }
         }
     }
 }

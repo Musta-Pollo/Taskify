@@ -34,6 +34,7 @@
 		F2A68ED12B69139B00AA219B /* DatePickDateOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED02B69139B00AA219B /* DatePickDateOptionalView.swift */; };
 		F2A68ED32B6936A500AA219B /* TimePickerOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */; };
 		F2A68ED52B6939A300AA219B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED42B6939A300AA219B /* DateExtension.swift */; };
+		F2A68ED72B694DB200AA219B /* TaskTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED62B694DB200AA219B /* TaskTrackingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		F2A68ED02B69139B00AA219B /* DatePickDateOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickDateOptionalView.swift; sourceTree = "<group>"; };
 		F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerOptionalView.swift; sourceTree = "<group>"; };
 		F2A68ED42B6939A300AA219B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F2A68ED62B694DB200AA219B /* TaskTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrackingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				F2A68ECE2B69111400AA219B /* DeadlinePickerView.swift */,
 				F2A68ED02B69139B00AA219B /* DatePickDateOptionalView.swift */,
 				F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */,
+				F2A68ED62B694DB200AA219B /* TaskTrackingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				F2A68ECD2B690EA600AA219B /* PriorityView.swift in Sources */,
 				F2A68EBA2B68D76300AA219B /* TodoDetailView.swift in Sources */,
 				F2A68EB62B68D60F00AA219B /* ErrorWrapper.swift in Sources */,
+				F2A68ED72B694DB200AA219B /* TaskTrackingView.swift in Sources */,
 				F2A68ED12B69139B00AA219B /* DatePickDateOptionalView.swift in Sources */,
 				F2A68EBC2B68D7DE00AA219B /* TodoCardView.swift in Sources */,
 				F2A68EB42B68D51C00AA219B /* TasksView.swift in Sources */,

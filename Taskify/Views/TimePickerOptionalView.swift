@@ -11,14 +11,14 @@ struct TimePickerOptionalView: View {
     let label: String
     let prompt: String
     @Binding var time: Date?
-    @Binding var hiddenTime: Date
+    @State private var hiddenTime: Date
     @State private var showTime: Bool
 
-    init(_ label: String, prompt: String, selection: Binding<Date?>, hiddenTime: Binding<Date>) {
+    init(_ label: String, prompt: String, selection: Binding<Date?>) {
         self.label = label
         self.prompt = prompt
         self._time = selection
-        self._hiddenTime = hiddenTime
+        self._hiddenTime = State(initialValue: selection.wrappedValue ?? Date())
         self._showTime = State(initialValue: selection.wrappedValue?.isTimeSet ?? false)
     }
 

@@ -14,16 +14,18 @@ struct Todo: Identifiable, Codable {
     var isCompleted: Bool
     var priority: Priority
     var dateTime: Date?
+    var note: String
     var projectId: UUID?
     
     
-    init(id: UUID = UUID(), name: String, priority: Priority, dateTime: Date? = nil, projectId: UUID? = nil, isCompleted: Bool = false) {
+    init(id: UUID = UUID(), name: String, priority: Priority, dateTime: Date? = nil, projectId: UUID? = nil, isCompleted: Bool = false, note: String = "") {
         self.id = id
         self.name = name
         self.priority = priority
         self.dateTime = dateTime
         self.projectId = projectId
         self.isCompleted = isCompleted
+        self.note = note
     }
     
     var nonNullDateTime : Date {

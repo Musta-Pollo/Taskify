@@ -53,9 +53,23 @@ class TasksStore: ObservableObject {
 
 extension TasksStore {
     static var testableTaskStore : TasksStore {
-        var store =  TasksStore()
+        let store =  TasksStore()
         store.tasks = Todo.sampleData
         store.projects = Project.sampleProjects
         return store
+    }
+    
+    func projectById(projectId: UUID?) -> Project? {
+        return projects.first(where: { $0.id == projectId })
+    }
+    
+    func projectByIdNonNull(projectId: UUID?) -> Project {
+        return projectById(projectId: projectId) ?? .sampleProjects[0]
+    }
+    
+    
+    
+    func projectByIdColor(projectId: UUID?) -> Color?{
+        return projectById(projectId: projectId)?.colorColor ?? .gray
     }
 }
