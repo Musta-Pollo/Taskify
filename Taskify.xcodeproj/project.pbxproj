@@ -14,6 +14,26 @@
 		F2A68E932B68C87900AA219B /* TaskifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68E922B68C87900AA219B /* TaskifyTests.swift */; };
 		F2A68E9D2B68C87900AA219B /* TaskifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68E9C2B68C87900AA219B /* TaskifyUITests.swift */; };
 		F2A68E9F2B68C87900AA219B /* TaskifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68E9E2B68C87900AA219B /* TaskifyUITestsLaunchTests.swift */; };
+		F2A68EAE2B68D21100AA219B /* TasksStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EAD2B68D21100AA219B /* TasksStore.swift */; };
+		F2A68EB02B68D23C00AA219B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EAF2B68D23C00AA219B /* Todo.swift */; };
+		F2A68EB22B68D26A00AA219B /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EB12B68D26A00AA219B /* Priority.swift */; };
+		F2A68EB42B68D51C00AA219B /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EB32B68D51C00AA219B /* TasksView.swift */; };
+		F2A68EB62B68D60F00AA219B /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EB52B68D60F00AA219B /* ErrorWrapper.swift */; };
+		F2A68EB82B68D65D00AA219B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EB72B68D65D00AA219B /* ErrorView.swift */; };
+		F2A68EBA2B68D76300AA219B /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EB92B68D76300AA219B /* TodoDetailView.swift */; };
+		F2A68EBC2B68D7DE00AA219B /* TodoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EBB2B68D7DE00AA219B /* TodoCardView.swift */; };
+		F2A68EBE2B68D87400AA219B /* NewTodoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EBD2B68D87400AA219B /* NewTodoSheet.swift */; };
+		F2A68EC02B68DA3500AA219B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EBF2B68DA3500AA219B /* Project.swift */; };
+		F2A68EC22B68E49F00AA219B /* TodoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EC12B68E49F00AA219B /* TodoEditView.swift */; };
+		F2A68EC42B68EA6100AA219B /* ProjectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EC32B68EA6100AA219B /* ProjectPicker.swift */; };
+		F2A68EC62B68EAEA00AA219B /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EC52B68EAEA00AA219B /* ProjectView.swift */; };
+		F2A68EC92B68ECD600AA219B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EC82B68ECD600AA219B /* ColorExtension.swift */; };
+		F2A68ECB2B690DF300AA219B /* PriorityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ECA2B690DF300AA219B /* PriorityPicker.swift */; };
+		F2A68ECD2B690EA600AA219B /* PriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ECC2B690EA600AA219B /* PriorityView.swift */; };
+		F2A68ECF2B69111400AA219B /* DeadlinePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ECE2B69111400AA219B /* DeadlinePickerView.swift */; };
+		F2A68ED12B69139B00AA219B /* DatePickDateOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED02B69139B00AA219B /* DatePickDateOptionalView.swift */; };
+		F2A68ED32B6936A500AA219B /* TimePickerOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */; };
+		F2A68ED52B6939A300AA219B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED42B6939A300AA219B /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +64,26 @@
 		F2A68E982B68C87900AA219B /* TaskifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A68E9C2B68C87900AA219B /* TaskifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskifyUITests.swift; sourceTree = "<group>"; };
 		F2A68E9E2B68C87900AA219B /* TaskifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F2A68EAD2B68D21100AA219B /* TasksStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksStore.swift; sourceTree = "<group>"; };
+		F2A68EAF2B68D23C00AA219B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		F2A68EB12B68D26A00AA219B /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		F2A68EB32B68D51C00AA219B /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		F2A68EB52B68D60F00AA219B /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		F2A68EB72B68D65D00AA219B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F2A68EB92B68D76300AA219B /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		F2A68EBB2B68D7DE00AA219B /* TodoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCardView.swift; sourceTree = "<group>"; };
+		F2A68EBD2B68D87400AA219B /* NewTodoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoSheet.swift; sourceTree = "<group>"; };
+		F2A68EBF2B68DA3500AA219B /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		F2A68EC12B68E49F00AA219B /* TodoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEditView.swift; sourceTree = "<group>"; };
+		F2A68EC32B68EA6100AA219B /* ProjectPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPicker.swift; sourceTree = "<group>"; };
+		F2A68EC52B68EAEA00AA219B /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		F2A68EC82B68ECD600AA219B /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		F2A68ECA2B690DF300AA219B /* PriorityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityPicker.swift; sourceTree = "<group>"; };
+		F2A68ECC2B690EA600AA219B /* PriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityView.swift; sourceTree = "<group>"; };
+		F2A68ECE2B69111400AA219B /* DeadlinePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinePickerView.swift; sourceTree = "<group>"; };
+		F2A68ED02B69139B00AA219B /* DatePickDateOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickDateOptionalView.swift; sourceTree = "<group>"; };
+		F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerOptionalView.swift; sourceTree = "<group>"; };
+		F2A68ED42B6939A300AA219B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +134,9 @@
 		F2A68E802B68C87700AA219B /* Taskify */ = {
 			isa = PBXGroup;
 			children = (
+				F2A68EC72B68ECC800AA219B /* Extensions */,
+				F2A68EAC2B68D20000AA219B /* Views */,
+				F2A68EAB2B68D1F400AA219B /* Models */,
 				F2A68E812B68C87700AA219B /* TaskifyApp.swift */,
 				F2A68E832B68C87700AA219B /* ContentView.swift */,
 				F2A68E852B68C87800AA219B /* Assets.xcassets */,
@@ -125,6 +168,47 @@
 				F2A68E9E2B68C87900AA219B /* TaskifyUITestsLaunchTests.swift */,
 			);
 			path = TaskifyUITests;
+			sourceTree = "<group>";
+		};
+		F2A68EAB2B68D1F400AA219B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F2A68EAD2B68D21100AA219B /* TasksStore.swift */,
+				F2A68EAF2B68D23C00AA219B /* Todo.swift */,
+				F2A68EB12B68D26A00AA219B /* Priority.swift */,
+				F2A68EB52B68D60F00AA219B /* ErrorWrapper.swift */,
+				F2A68EBF2B68DA3500AA219B /* Project.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2A68EAC2B68D20000AA219B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2A68EB32B68D51C00AA219B /* TasksView.swift */,
+				F2A68EB72B68D65D00AA219B /* ErrorView.swift */,
+				F2A68EB92B68D76300AA219B /* TodoDetailView.swift */,
+				F2A68EBB2B68D7DE00AA219B /* TodoCardView.swift */,
+				F2A68EBD2B68D87400AA219B /* NewTodoSheet.swift */,
+				F2A68EC12B68E49F00AA219B /* TodoEditView.swift */,
+				F2A68EC32B68EA6100AA219B /* ProjectPicker.swift */,
+				F2A68EC52B68EAEA00AA219B /* ProjectView.swift */,
+				F2A68ECA2B690DF300AA219B /* PriorityPicker.swift */,
+				F2A68ECC2B690EA600AA219B /* PriorityView.swift */,
+				F2A68ECE2B69111400AA219B /* DeadlinePickerView.swift */,
+				F2A68ED02B69139B00AA219B /* DatePickDateOptionalView.swift */,
+				F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2A68EC72B68ECC800AA219B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F2A68EC82B68ECD600AA219B /* ColorExtension.swift */,
+				F2A68ED42B6939A300AA219B /* DateExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +341,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A68EB02B68D23C00AA219B /* Todo.swift in Sources */,
+				F2A68ED32B6936A500AA219B /* TimePickerOptionalView.swift in Sources */,
+				F2A68EBE2B68D87400AA219B /* NewTodoSheet.swift in Sources */,
+				F2A68ECD2B690EA600AA219B /* PriorityView.swift in Sources */,
+				F2A68EBA2B68D76300AA219B /* TodoDetailView.swift in Sources */,
+				F2A68EB62B68D60F00AA219B /* ErrorWrapper.swift in Sources */,
+				F2A68ED12B69139B00AA219B /* DatePickDateOptionalView.swift in Sources */,
+				F2A68EBC2B68D7DE00AA219B /* TodoCardView.swift in Sources */,
+				F2A68EB42B68D51C00AA219B /* TasksView.swift in Sources */,
+				F2A68EAE2B68D21100AA219B /* TasksStore.swift in Sources */,
 				F2A68E842B68C87700AA219B /* ContentView.swift in Sources */,
+				F2A68EB22B68D26A00AA219B /* Priority.swift in Sources */,
 				F2A68E822B68C87700AA219B /* TaskifyApp.swift in Sources */,
+				F2A68ECF2B69111400AA219B /* DeadlinePickerView.swift in Sources */,
+				F2A68EB82B68D65D00AA219B /* ErrorView.swift in Sources */,
+				F2A68ECB2B690DF300AA219B /* PriorityPicker.swift in Sources */,
+				F2A68EC92B68ECD600AA219B /* ColorExtension.swift in Sources */,
+				F2A68ED52B6939A300AA219B /* DateExtension.swift in Sources */,
+				F2A68EC02B68DA3500AA219B /* Project.swift in Sources */,
+				F2A68EC62B68EAEA00AA219B /* ProjectView.swift in Sources */,
+				F2A68EC22B68E49F00AA219B /* TodoEditView.swift in Sources */,
+				F2A68EC42B68EA6100AA219B /* ProjectPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

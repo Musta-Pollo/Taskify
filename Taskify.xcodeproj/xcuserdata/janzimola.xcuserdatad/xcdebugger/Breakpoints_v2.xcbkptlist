@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "04B30320-C56F-4ED0-B9E0-A03AE72E21B3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98DAB4D3-17A6-4263-B086-DB34F0703062"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Views/NewTodoSheet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A49CA7C-ECA9-4246-937A-F7987DBE1E4D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Extensions/DateExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "nextAppropriateTime()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BA78F47-B473-4015-87DB-F28B5C1FA39A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Extensions/DateExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "nextAppropriateTime()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1BA78F47-B473-4015-87DB-F28B5C1FA39A - b4b60d96b77c012b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foundation.Date.nextAppropriateTime() -&gt; Foundation.Date"
+                  moduleName = "Taskify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janzimola/Documents/AppDev/Taskify/Taskify/Extensions/DateExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "2012">
+               </Location>
+               <Location
+                  uuid = "1BA78F47-B473-4015-87DB-F28B5C1FA39A - b4b60d96b77c012b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foundation.Date.nextAppropriateTime() -&gt; Foundation.Date"
+                  moduleName = "Taskify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janzimola/Documents/AppDev/Taskify/Taskify/Extensions/DateExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "2068">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5AC306E-F234-4967-A04F-93AFDBBB3294"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Extensions/DateExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "nextAppropriateTime()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB34620A-B3B7-445B-8AA1-78DC397F42AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Extensions/DateExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "nextAppropriateTime()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB34620A-B3B7-445B-8AA1-78DC397F42AF - b4b60d96b77c0023"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foundation.Date.nextAppropriateTime() -&gt; Foundation.Date"
+                  moduleName = "Taskify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janzimola/Documents/AppDev/Taskify/Taskify/Extensions/DateExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "2252">
+               </Location>
+               <Location
+                  uuid = "BB34620A-B3B7-445B-8AA1-78DC397F42AF - b4b60d96b77c0023"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foundation.Date.nextAppropriateTime() -&gt; Foundation.Date"
+                  moduleName = "Taskify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janzimola/Documents/AppDev/Taskify/Taskify/Extensions/DateExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "2308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
