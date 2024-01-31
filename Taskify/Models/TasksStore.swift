@@ -9,42 +9,36 @@ import SwiftUI
 
 @MainActor
 class TasksStore: ObservableObject {
-    @Published var tasks: [Todo] = []
-    @Published var projects: [Project] = []
+    @Published var appData: AppData = AppData()
+
     
-    private static func fileURL() throws -> (tasksUrl: URL, projectsUrl: URL) {
+    private static func fileURL() throws -> URL {
         let defPath = try FileManager.default.url(for: .documentDirectory,
                                     in: .userDomainMask,
                                     appropriateFor: nil,
                                     create: false)
-        return (defPath.appendingPathComponent("tasks.data"), defPath.appendingPathComponent("projects.data"))
+        return defPath.appendingPathComponent("appData.data")
     }
     
     func load() async throws {
-        let task = Task<([Todo], [Project]), Error> {
-            let (tasksUrl, projectsUrl) = try Self.fileURL()
-            guard let tasksData = try? Data(contentsOf: tasksUrl) else {
-                return (Todo.sampleData, Project.sampleProjects)
+        let task = Task<AppData, Error> {
+            let url = try Self.fileURL()
+            guard let appDataData = try? Data(contentsOf: url) else {
+                return AppData.sampleData;
             }
-            guard let projectsData = try? Data(contentsOf: projectsUrl) else {
-                return (Todo.sampleData,Project.sampleProjects)
-            }
-            let todos = try JSONDecoder().decode([Todo].self, from: tasksData)
-            let projects = try JSONDecoder().decode([Project].self, from: projectsData)
-            return (todos, projects)
+           
+            let appData = try JSONDecoder().decode(AppData.self, from: appDataData)
+            return appData;
         }
-        let (todos, projects) = try await task.value
-        self.tasks = todos
-        self.projects = projects
+        let appData = try await task.value
+        self.appData = appData
     }
     
-    func save(todos: [Todo], projects: [Project]) async throws {
+    func save() async throws {
         let task = Task {
-            let todoData = try JSONEncoder().encode(todos)
-            let projectData = try JSONEncoder().encode(projects)
-            let (todoUrl, projectUrl) = try Self.fileURL()
-            try todoData.write(to: todoUrl)
-            try projectData.write(to: projectUrl)
+            let appData = try JSONEncoder().encode(appData)
+            let url = try Self.fileURL()
+            try appData.write(to: url)
         }
         _ = try await task.value
     }
@@ -54,13 +48,12 @@ class TasksStore: ObservableObject {
 extension TasksStore {
     static var testableTaskStore : TasksStore {
         let store =  TasksStore()
-        store.tasks = Todo.sampleData
-        store.projects = Project.sampleProjects
+        store.appData = AppData.sampleData
         return store
     }
     
     func projectById(projectId: UUID?) -> Project? {
-        return projects.first(where: { $0.id == projectId })
+        return appData.projects.first(where: { $0.id == projectId })
     }
     
     func projectByIdNonNull(projectId: UUID?) -> Project {
@@ -68,8 +61,50 @@ extension TasksStore {
     }
     
     
-    
     func projectByIdColor(projectId: UUID?) -> Color?{
-        return projectById(projectId: projectId)?.colorColor ?? .gray
+        return projectById(projectId: projectId)?.color.color
     }
+    
+    var projects: [Project] {
+        set {
+            self.appData.projects = newValue
+        }
+        
+        get {
+            return self.appData.projects
+        }
+    }
+    var tasks: [Todo] {
+        set {
+            self.appData.tasks = newValue
+        }
+        
+        get {
+            return self.appData.tasks
+        }
+    }
+    var history: [History] {
+        set {
+            self.appData.history = newValue
+        }
+        
+        get {
+            return self.appData.history
+        }
+    };
+    
+    
+    
+    func taskHistory(taskId: UUID) -> [History] {
+        return history.filter { $0.taskId == taskId }.sorted
+    }
+
+    func projectHistory(projectId: UUID) -> [History] {
+        return history.filter { $0.projectId == projectId }.sorted
+    }
+    
+    func historyForId(historyId: UUID) -> History {
+        return history.first(where: {$0.id == historyId})!
+    }
+    
 }

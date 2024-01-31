@@ -19,6 +19,7 @@ struct ProjectDetailView: View {
     @EnvironmentObject var tasks : TasksStore
     @State private var editingProject = Project.emptyProject
     @State private var isPresentingEditView = false
+
     
     var body: some View {
         List {
@@ -35,12 +36,29 @@ struct ProjectDetailView: View {
                     Image(systemName: "circle.fill")
                         .resizable()
                         .frame(width: 16, height: 16)
-                        .foregroundColor(project.colorColor)
+                        .foregroundColor(project.color.color)
                 }
                 
             }
             Section(header: Text("History")) {
+                if tasks.projectHistory(projectId: project.id).isEmpty {
+                    Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
+                }
                 
+                ForEach(tasks.projectHistory(projectId: project.id).map({ h in
+                    h.id.uuidString
+                })) { hId in
+//                    let index = tasks.history.firstIndex(where: { h in h.id == history.id}) ?? 0
+                    let id = UUID(uuidString: hId)
+                    let history = tasks.historyForId(historyId: id)
+                    NavigationLink(destination: HistoryView(history: $tasks.history[0])){
+                        HStack {
+                            Image(systemName: "calendar")
+                            Text(history.formattedDuration())
+                        }
+                    }
+                    
+                }
             }
             .navigationTitle(project.name)
             .toolbar {
@@ -74,5 +92,5 @@ struct ProjectDetailView: View {
 
 
 #Preview {
-    ProjectDetailView(project: .constant(Project.sampleProjects[0]))
+    ProjectDetailView(project: .constant(Project.sampleProjects[0])).environmentObject(TasksStore.testableTaskStore)
 }

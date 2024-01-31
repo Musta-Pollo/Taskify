@@ -9,29 +9,34 @@ import SwiftUI
 
 struct ProjectsView: View {
     @EnvironmentObject var tasks: TasksStore
-    @State private var isPresentingNewScrumView = false
+    @State private var isPresentingNewProjectView = false
     var body: some View {
         NavigationStack {
-            List($tasks.projects.sorted { p1, p2 in
-                return p1.name.wrappedValue > p2.name.wrappedValue
-            }) { $project in
-                    NavigationLink(destination: ProjectDetailView(project: $project)) {
-                        ProjectCardView(project: $project)
+            List {
+                ForEach($tasks.projects, id: \.self.wrappedValue) { $project in
+                        NavigationLink(destination: ProjectDetailView(project: $project)) {
+                            ProjectCardView(project: $project)
+                    }
                 }
+                .onMove(perform: move)
             }
             .navigationTitle("Projects")
             .toolbar {
                 Button(action: {
-                    isPresentingNewScrumView = true
+                    isPresentingNewProjectView = true
                 }) {
                     Image(systemName: "plus")
                 }
                 .accessibilityLabel("New Task")
             }
         }
-        .sheet(isPresented: $isPresentingNewScrumView) {
-            NewTodoSheet(isPresentingNewTodoView: $isPresentingNewScrumView)
+        .sheet(isPresented: $isPresentingNewProjectView) {
+            NewProjectSheet(isPresentingNewProjectView: $isPresentingNewProjectView)
         }
+    }
+    
+    private func move(from source: IndexSet, to destination: Int) {
+        tasks.projects.move(fromOffsets: source, toOffset: destination)
     }
     
 }

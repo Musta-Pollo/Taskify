@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ColorView: View {
-    let color: Color
+    let color: ColorType
     
     var body: some View {
         HStack {
             Image(systemName: "circle.fill")
-                .foregroundColor(color)
+                .foregroundColor(color.color)
                 .padding(.trailing)
-            Text(color.name())
+            Text(color.name)
             
         }
     }

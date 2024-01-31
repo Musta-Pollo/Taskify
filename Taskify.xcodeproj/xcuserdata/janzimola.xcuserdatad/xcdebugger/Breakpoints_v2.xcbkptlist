@@ -190,73 +190,74 @@
             filePath = "Taskify/Models/TasksStore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "save(todos:projects:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "save()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D1BB30F3-F014-452E-BE83-C82D1E5D78F6"
+            uuid = "CBEAFEA7-767A-407D-932D-3E974E71850A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Taskify/Extensions/ColorExtension.swift"
+            filePath = "Taskify/Models/IdColor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "predefinedIdColors"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "==(lhs:rhs:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5293E20-3125-44BE-917D-6602BECB9FE8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Views/ProjectsView/ProjectsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "move(from:to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E31EDED6-B181-40EB-9A15-A6880099A700"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Views/ProjectsView/ProjectDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "D1BB30F3-F014-452E-BE83-C82D1E5D78F6 - 3d450a7478da599f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUI.Color.isDark.getter : Swift.Bool"
-                  moduleName = "Taskify"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/janzimola/Documents/AppDev/Taskify/Taskify/Extensions/ColorExtension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "D1BB30F3-F014-452E-BE83-C82D1E5D78F6 - 3d450a7478da599f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUI.Color.isDark.getter : Swift.Bool"
-                  moduleName = "Taskify"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/janzimola/Documents/AppDev/Taskify/Taskify/Extensions/ColorExtension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  uuid = "D1BB30F3-F014-452E-BE83-C82D1E5D78F6 - 3d450a7478da599f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUI.Color.isDark.getter : Swift.Bool"
-                  moduleName = "Taskify"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/janzimola/Documents/AppDev/Taskify/Taskify/Extensions/ColorExtension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "124">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "285B8355-83F7-4123-94DE-3792B6B7F424"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taskify/Views/ProjectsView/ProjectsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

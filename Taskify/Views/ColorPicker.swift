@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ColorPicker: View {
-    @Binding var selectedColor: IdColor
+    @Binding var selectedColor: ColorType
 
     var body: some View {
         Picker("Color", selection: $selectedColor) {
-            ForEach(Color.predefinedIdColors) { idColor in
-                ColorView(color: idColor.color)
+            ForEach(ColorType.allCases) { idColor in
+                ColorView(color: idColor)
                     .tag(idColor)
             }
         }
@@ -23,6 +23,6 @@ struct ColorPicker: View {
 
 struct ColorPicker_Previews: PreviewProvider {
     static var previews: some View {
-        ColorPicker(selectedColor: .constant(IdColor(color: .blue)))
+        ColorPicker(selectedColor: .constant(ColorType.blue))
     }
 }

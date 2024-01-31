@@ -16,7 +16,7 @@ struct ProjectCardView: View {
             Image(systemName: "circle.fill" )
                 .resizable()
                 .frame(width: 24, height: 24)
-                .foregroundColor(project.colorColor)
+                .foregroundColor(project.color.color)
                 .padding([.trailing])
             
             Text(project.name)

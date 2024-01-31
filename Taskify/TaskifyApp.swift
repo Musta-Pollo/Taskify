@@ -17,7 +17,7 @@ struct TaskifyApp: App {
             AppView() {
                 Task {
                     do {
-                        try await store.save(todos: store.tasks, projects: store.projects)
+                        try await store.save()
                     } catch {
                         errorWrapper = ErrorWrapper(error: error,
                                                     guidance: "Try again later.")

@@ -14,7 +14,7 @@ struct ProjectEditView: View {
         Form {
             Section(header: Text("Default Info")) {
                 TextField("Name", text: $project.name)
-                ColorPicker(selectedColor: $project.idColor)
+                ColorPicker(selectedColor: $project.color)
             }
         }
     }
