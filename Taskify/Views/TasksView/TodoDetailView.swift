@@ -23,19 +23,32 @@ struct TodoDetailView: View {
                 }
                
                     HStack {
-                        Text("Project")
+                        Label("Project", systemImage: "folder")
                         Spacer()
                         if(todo.projectId != nil){
-                            ProjectView(project: tasks.projectByIdNonNull(projectId: todo.projectId))
+                            Text(tasks.projectByIdNonNull(projectId: todo.projectId).name)
+                                .opacity(0.6)
                         } else {
                             Text("None")
                                 .opacity(0.6)
                         }
+//                        Text("Project")
+//                        Spacer()
+//                        if(todo.projectId != nil){
+//                            ProjectView(project: tasks.projectByIdNonNull(projectId: todo.projectId))
+//                        } else {
+//                            Text("None")
+//                                .opacity(0.6)
+//                        }
                     }
                     HStack {
-                        Text("Priority")
+//                        Text("Priority")
+//                        Spacer()
+//                        PriorityView(priority: todo.priority)
+//                            .opacity(0.6)
+                        Label("Priority", systemImage: "flag")
                         Spacer()
-                        PriorityView(priority: todo.priority)
+                        Text(todo.priority.name)
                             .opacity(0.6)
                     }
             }

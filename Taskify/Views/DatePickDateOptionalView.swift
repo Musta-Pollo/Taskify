@@ -43,6 +43,7 @@ struct DatePickerOptional: View {
                         .onChange(of: hiddenDate) { oldDate, newDate in
                             date = newDate
                         }
+                        .preferredColorScheme(.dark)
                 } else {
                     Button(action: {
                         showDate = true

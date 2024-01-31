@@ -1,5 +1,5 @@
 //
-//  ProjectView.swift
+//  ColorView.swift
 //  Taskify
 //
 //  Created by Jan Zimola on 30.01.2024.
@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct ProjectView: View {
-    let project: Project?
+struct ColorView: View {
+    let color: Color
     
     var body: some View {
         HStack {
             Image(systemName: "circle.fill")
-                .foregroundColor(project?.colorColor ?? .gray)
+                .foregroundColor(color)
                 .padding(.trailing)
-            Text(project?.name ?? "None")
+            Text(color.name())
             
         }
     }
 }
 
-struct ThemeView_Previews: PreviewProvider {
+struct Color_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectView(project: Project.sampleProjects[0])
+        ColorView(color: .blue)
     }
 }

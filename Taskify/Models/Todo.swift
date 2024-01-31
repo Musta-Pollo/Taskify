@@ -38,6 +38,7 @@ struct Todo: Identifiable, Codable {
             return dateTime.unsafelyUnwrapped
         }
     }
+
 }
 
 
@@ -65,12 +66,17 @@ extension Binding<[Todo]> {
     var sortedTodos: Binding<[Todo]> {
             Binding<[Todo]>(
                 get: {
+                        
                         var sortedByPriority = wrappedValue.sorted { task1, task2 in
                             return task1.priority.value < task2.priority.value
                         }
-                        return sortedByPriority.sorted { task1, task2 in
+                        var sortedByDeadline =  sortedByPriority.sorted { task1, task2 in
                             return task1.nonNullDateTime < task2.nonNullDateTime
                         }
+                    return sortedByDeadline.sorted { task1, task2 in
+                        return (task1.isCompleted ? 1 : 0) < (task2.isCompleted ? 1 : 0)
+                    }
+                    
 //                     wrappedValue.sorted { (task1: Todo, task2: Todo) in
 //                                if task1.priority.value == task2.priority.value {
 //                                    // If priorities are equal, sort by deadline

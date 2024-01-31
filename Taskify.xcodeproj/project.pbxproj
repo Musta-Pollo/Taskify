@@ -35,6 +35,17 @@
 		F2A68ED32B6936A500AA219B /* TimePickerOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */; };
 		F2A68ED52B6939A300AA219B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED42B6939A300AA219B /* DateExtension.swift */; };
 		F2A68ED72B694DB200AA219B /* TaskTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED62B694DB200AA219B /* TaskTrackingView.swift */; };
+		F2A68ED92B695C8800AA219B /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68ED82B695C8800AA219B /* AppView.swift */; };
+		F2A68EDB2B69600300AA219B /* AvPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EDA2B69600300AA219B /* AvPlayerExtension.swift */; };
+		F2A68EDE2B69610500AA219B /* congrats.wav in Resources */ = {isa = PBXBuildFile; fileRef = F2A68EDD2B69610500AA219B /* congrats.wav */; };
+		F2A68EE02B696F6200AA219B /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EDF2B696F6200AA219B /* ProjectsView.swift */; };
+		F2A68EE52B69700200AA219B /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EE42B69700200AA219B /* ProjectDetailView.swift */; };
+		F2A68EE72B69707F00AA219B /* ProjectTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EE62B69707F00AA219B /* ProjectTrackingView.swift */; };
+		F2A68EE92B69711F00AA219B /* ProjectEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EE82B69711F00AA219B /* ProjectEditView.swift */; };
+		F2A68EEB2B69724200AA219B /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EEA2B69724200AA219B /* ColorPicker.swift */; };
+		F2A68EED2B69728200AA219B /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EEC2B69728200AA219B /* ColorView.swift */; };
+		F2A68EEF2B69754D00AA219B /* IdColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EEE2B69754D00AA219B /* IdColor.swift */; };
+		F2A68EF12B69786C00AA219B /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68EF02B69786C00AA219B /* ProjectCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +97,17 @@
 		F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerOptionalView.swift; sourceTree = "<group>"; };
 		F2A68ED42B6939A300AA219B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		F2A68ED62B694DB200AA219B /* TaskTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrackingView.swift; sourceTree = "<group>"; };
+		F2A68ED82B695C8800AA219B /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		F2A68EDA2B69600300AA219B /* AvPlayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvPlayerExtension.swift; sourceTree = "<group>"; };
+		F2A68EDD2B69610500AA219B /* congrats.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = congrats.wav; sourceTree = "<group>"; };
+		F2A68EDF2B696F6200AA219B /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		F2A68EE42B69700200AA219B /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		F2A68EE62B69707F00AA219B /* ProjectTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTrackingView.swift; sourceTree = "<group>"; };
+		F2A68EE82B69711F00AA219B /* ProjectEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEditView.swift; sourceTree = "<group>"; };
+		F2A68EEA2B69724200AA219B /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		F2A68EEC2B69728200AA219B /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		F2A68EEE2B69754D00AA219B /* IdColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdColor.swift; sourceTree = "<group>"; };
+		F2A68EF02B69786C00AA219B /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +165,7 @@
 				F2A68E832B68C87700AA219B /* ContentView.swift */,
 				F2A68E852B68C87800AA219B /* Assets.xcassets */,
 				F2A68E872B68C87800AA219B /* Preview Content */,
+				F2A68EDC2B69601D00AA219B /* Resources */,
 			);
 			path = Taskify;
 			sourceTree = "<group>";
@@ -180,6 +203,7 @@
 				F2A68EB12B68D26A00AA219B /* Priority.swift */,
 				F2A68EB52B68D60F00AA219B /* ErrorWrapper.swift */,
 				F2A68EBF2B68DA3500AA219B /* Project.swift */,
+				F2A68EEE2B69754D00AA219B /* IdColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,20 +211,20 @@
 		F2A68EAC2B68D20000AA219B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F2A68EB32B68D51C00AA219B /* TasksView.swift */,
+				F2A68EE32B696FAF00AA219B /* ProjectsView */,
+				F2A68EE12B696F7500AA219B /* TasksView */,
 				F2A68EB72B68D65D00AA219B /* ErrorView.swift */,
-				F2A68EB92B68D76300AA219B /* TodoDetailView.swift */,
-				F2A68EBB2B68D7DE00AA219B /* TodoCardView.swift */,
-				F2A68EBD2B68D87400AA219B /* NewTodoSheet.swift */,
-				F2A68EC12B68E49F00AA219B /* TodoEditView.swift */,
 				F2A68EC32B68EA6100AA219B /* ProjectPicker.swift */,
 				F2A68EC52B68EAEA00AA219B /* ProjectView.swift */,
 				F2A68ECA2B690DF300AA219B /* PriorityPicker.swift */,
 				F2A68ECC2B690EA600AA219B /* PriorityView.swift */,
 				F2A68ECE2B69111400AA219B /* DeadlinePickerView.swift */,
 				F2A68ED02B69139B00AA219B /* DatePickDateOptionalView.swift */,
-				F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */,
 				F2A68ED62B694DB200AA219B /* TaskTrackingView.swift */,
+				F2A68ED22B6936A500AA219B /* TimePickerOptionalView.swift */,
+				F2A68ED82B695C8800AA219B /* AppView.swift */,
+				F2A68EEA2B69724200AA219B /* ColorPicker.swift */,
+				F2A68EEC2B69728200AA219B /* ColorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,8 +234,41 @@
 			children = (
 				F2A68EC82B68ECD600AA219B /* ColorExtension.swift */,
 				F2A68ED42B6939A300AA219B /* DateExtension.swift */,
+				F2A68EDA2B69600300AA219B /* AvPlayerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F2A68EDC2B69601D00AA219B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2A68EDD2B69610500AA219B /* congrats.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2A68EE12B696F7500AA219B /* TasksView */ = {
+			isa = PBXGroup;
+			children = (
+				F2A68EB92B68D76300AA219B /* TodoDetailView.swift */,
+				F2A68EBB2B68D7DE00AA219B /* TodoCardView.swift */,
+				F2A68EBD2B68D87400AA219B /* NewTodoSheet.swift */,
+				F2A68EC12B68E49F00AA219B /* TodoEditView.swift */,
+				F2A68EB32B68D51C00AA219B /* TasksView.swift */,
+			);
+			path = TasksView;
+			sourceTree = "<group>";
+		};
+		F2A68EE32B696FAF00AA219B /* ProjectsView */ = {
+			isa = PBXGroup;
+			children = (
+				F2A68EDF2B696F6200AA219B /* ProjectsView.swift */,
+				F2A68EE42B69700200AA219B /* ProjectDetailView.swift */,
+				F2A68EE62B69707F00AA219B /* ProjectTrackingView.swift */,
+				F2A68EE82B69711F00AA219B /* ProjectEditView.swift */,
+				F2A68EF02B69786C00AA219B /* ProjectCardView.swift */,
+			);
+			path = ProjectsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A68E892B68C87800AA219B /* Preview Assets.xcassets in Resources */,
+				F2A68EDE2B69610500AA219B /* congrats.wav in Resources */,
 				F2A68E862B68C87800AA219B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,24 +404,34 @@
 			files = (
 				F2A68EB02B68D23C00AA219B /* Todo.swift in Sources */,
 				F2A68ED32B6936A500AA219B /* TimePickerOptionalView.swift in Sources */,
+				F2A68EE52B69700200AA219B /* ProjectDetailView.swift in Sources */,
+				F2A68EDB2B69600300AA219B /* AvPlayerExtension.swift in Sources */,
 				F2A68EBE2B68D87400AA219B /* NewTodoSheet.swift in Sources */,
+				F2A68EE92B69711F00AA219B /* ProjectEditView.swift in Sources */,
 				F2A68ECD2B690EA600AA219B /* PriorityView.swift in Sources */,
 				F2A68EBA2B68D76300AA219B /* TodoDetailView.swift in Sources */,
+				F2A68EF12B69786C00AA219B /* ProjectCardView.swift in Sources */,
 				F2A68EB62B68D60F00AA219B /* ErrorWrapper.swift in Sources */,
 				F2A68ED72B694DB200AA219B /* TaskTrackingView.swift in Sources */,
 				F2A68ED12B69139B00AA219B /* DatePickDateOptionalView.swift in Sources */,
 				F2A68EBC2B68D7DE00AA219B /* TodoCardView.swift in Sources */,
 				F2A68EB42B68D51C00AA219B /* TasksView.swift in Sources */,
+				F2A68EED2B69728200AA219B /* ColorView.swift in Sources */,
 				F2A68EAE2B68D21100AA219B /* TasksStore.swift in Sources */,
 				F2A68E842B68C87700AA219B /* ContentView.swift in Sources */,
 				F2A68EB22B68D26A00AA219B /* Priority.swift in Sources */,
 				F2A68E822B68C87700AA219B /* TaskifyApp.swift in Sources */,
+				F2A68EEB2B69724200AA219B /* ColorPicker.swift in Sources */,
 				F2A68ECF2B69111400AA219B /* DeadlinePickerView.swift in Sources */,
+				F2A68EEF2B69754D00AA219B /* IdColor.swift in Sources */,
+				F2A68EE72B69707F00AA219B /* ProjectTrackingView.swift in Sources */,
 				F2A68EB82B68D65D00AA219B /* ErrorView.swift in Sources */,
 				F2A68ECB2B690DF300AA219B /* PriorityPicker.swift in Sources */,
+				F2A68EE02B696F6200AA219B /* ProjectsView.swift in Sources */,
 				F2A68EC92B68ECD600AA219B /* ColorExtension.swift in Sources */,
 				F2A68ED52B6939A300AA219B /* DateExtension.swift in Sources */,
 				F2A68EC02B68DA3500AA219B /* Project.swift in Sources */,
+				F2A68ED92B695C8800AA219B /* AppView.swift in Sources */,
 				F2A68EC62B68EAEA00AA219B /* ProjectView.swift in Sources */,
 				F2A68EC22B68E49F00AA219B /* TodoEditView.swift in Sources */,
 				F2A68EC42B68EA6100AA219B /* ProjectPicker.swift in Sources */,

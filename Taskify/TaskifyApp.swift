@@ -14,7 +14,7 @@ struct TaskifyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TasksView() {
+            AppView() {
                 Task {
                     do {
                         try await store.save(todos: store.tasks, projects: store.projects)

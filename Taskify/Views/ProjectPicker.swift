@@ -14,8 +14,9 @@ struct ProjectPicker: View {
     
     var body: some View {
         Picker("Project", selection: $selectedProjectId) {
-            ForEach(tasks.projects) { project in
-                ProjectView(project: project)
+            ForEach(tasks.projects.optionalProjects) { project in
+                
+                ProjectView(project: project.project)
                     .tag(project.id as UUID?)
             }
         }

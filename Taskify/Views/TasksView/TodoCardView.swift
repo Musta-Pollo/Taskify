@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AudioToolbox
+import AVFoundation
 
 struct TodoCardView: View {
     @Binding var todo : Todo
@@ -19,6 +21,11 @@ struct TodoCardView: View {
                 .foregroundColor(todo.priority.color)
             
                 .onTapGesture {
+                    if(!todo.isCompleted){
+                        let player = AVPlayer.congratsPlayer
+                        player.seek(to: .zero)
+                        player.play()
+                    }
                     todo.isCompleted.toggle() // Toggle the completion status of the todo
                 }
                 .padding([.trailing])

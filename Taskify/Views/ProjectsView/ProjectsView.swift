@@ -1,5 +1,5 @@
 //
-//  TasksView.swift
+//  ProjectsView.swift
 //  Taskify
 //
 //  Created by Jan Zimola on 30.01.2024.
@@ -7,21 +7,19 @@
 
 import SwiftUI
 
-struct TasksView: View {
+struct ProjectsView: View {
     @EnvironmentObject var tasks: TasksStore
-    @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewScrumView = false
-    let saveAction: ()->Void
     var body: some View {
         NavigationStack {
-            ZStack(alignment: .bottomTrailing){
-                List($tasks.tasks.sortedTodos) { $task in
-                        NavigationLink(destination: TodoDetailView(todo: $task)) {
-                            TodoCardView(todo: $task)
-                        }
-                    }
+            List($tasks.projects.sorted { p1, p2 in
+                return p1.name.wrappedValue > p2.name.wrappedValue
+            }) { $project in
+                    NavigationLink(destination: ProjectDetailView(project: $project)) {
+                        ProjectCardView(project: $project)
+                }
             }
-            .navigationTitle("Daily Tasks")
+            .navigationTitle("Projects")
             .toolbar {
                 Button(action: {
                     isPresentingNewScrumView = true
@@ -34,13 +32,10 @@ struct TasksView: View {
         .sheet(isPresented: $isPresentingNewScrumView) {
             NewTodoSheet(isPresentingNewTodoView: $isPresentingNewScrumView)
         }
-        .onChange(of: scenePhase) { oldPhase, newPhase in
-            if newPhase == .inactive { saveAction() }
-        }
     }
     
 }
 
 #Preview {
-    TasksView(saveAction: {}).environmentObject(TasksStore.testableTaskStore)
+    ProjectsView().environmentObject(TasksStore.testableTaskStore)
 }
