@@ -9,12 +9,12 @@ import SwiftUI
 
 struct NewProjectSheet: View {
     @State private var newProject = Project.emptyProject
-    @EnvironmentObject var appData: TasksStore
+    @Binding var appData: AppData
     @Binding var isPresentingNewProjectView: Bool
     
     var body: some View {
         NavigationStack {
-            ProjectEditView(project: $newProject)
+            ProjectEditView(project: $newProject, appData: $appData)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button("Dismiss") {
@@ -34,6 +34,6 @@ struct NewProjectSheet: View {
 
 struct NewProjectSheet_Previews: PreviewProvider {
     static var previews: some View {
-        NewProjectSheet(isPresentingNewProjectView: .constant(true)).environmentObject(TasksStore())
+        NewProjectSheet( appData: .constant(TasksStore.testableTaskStore.appData), isPresentingNewProjectView: .constant(true))
     }
 }

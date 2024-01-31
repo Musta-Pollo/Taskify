@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct AppView: View {
-    @EnvironmentObject var tasks: TasksStore
+    @Binding var appData: AppData
     @Environment(\.scenePhase) private var scenePhase
     @State private var selectedTab: Int = 0
     let saveAction: ()->Void
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            TasksView()
-                .tabItem { 
+            TasksView(appData: $appData)
+                .tabItem {
                     Label("Tasks", systemImage: "list.bullet")
                 }
                 .tag(0)
 
             // Add additional tabs here
-            ProjectsView()
+            ProjectsView(appData: $appData)
                 .tabItem {
                     Label("Projects", systemImage: "folder")
                 }
@@ -36,7 +36,7 @@ struct AppView: View {
 
 struct TasksView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView(saveAction: {}).environmentObject(TasksStore.testableTaskStore)
+        AppView(appData: .constant(TasksStore.testableTaskStore.appData), saveAction: {})
     }
 }
 

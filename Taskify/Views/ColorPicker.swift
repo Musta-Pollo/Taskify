@@ -17,6 +17,7 @@ struct ColorPicker: View {
                     .tag(idColor)
             }
         }
+        
         .pickerStyle(.navigationLink)
     }
 }

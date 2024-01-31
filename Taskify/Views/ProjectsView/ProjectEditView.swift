@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProjectEditView: View {
     @Binding var project: Project
-    @EnvironmentObject var tasks: TasksStore
+    @Binding var appData: AppData
     var body: some View {
         Form {
             Section(header: Text("Default Info")) {
@@ -23,6 +23,6 @@ struct ProjectEditView: View {
 
 struct ProjectEditView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectEditView(project: .constant(Project.sampleProjects[0])).environmentObject(TasksStore.testableTaskStore)
+        ProjectEditView(project: .constant(Project.sampleProjects[0]), appData: .constant(TasksStore.testableTaskStore.appData))
     }
 }

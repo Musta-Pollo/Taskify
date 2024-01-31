@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct History: Identifiable, Codable{
+struct History: Identifiable, Codable, Hashable{
     let id: UUID
     let start: Date
     let end: Date

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TasksView: View {
-    @EnvironmentObject var tasks: TasksStore
+    @Binding var appData: AppData
     @State private var isPresentingNewScrumView = false
     var body: some View {
         NavigationStack {
-            List($tasks.tasks.sortedTodos) { $task in
-                    NavigationLink(destination: TodoDetailView(todo: $task)) {
+            List($appData.tasks.sortedTodos) { $task in
+                NavigationLink(destination: TodoDetailView(todo: $task, appData: $appData)) {
                         TodoCardView(todo: $task)
                 }
             }
@@ -35,5 +35,5 @@ struct TasksView: View {
 }
 
 #Preview {
-    TasksView().environmentObject(TasksStore.testableTaskStore)
+    TasksView(appData: .constant(TasksStore.testableTaskStore.appData)).environmentObject(TasksStore.testableTaskStore)
 }

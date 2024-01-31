@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TodoDetailView: View {
     @Binding var todo : Todo
-    @EnvironmentObject var tasks : TasksStore
+//    @Binding var projects: [Project]
+    @Binding var appData : AppData
     @State private var editingTodo = Todo.emptyTodo
     @State private var isPresentingEditView = false
     
@@ -26,7 +27,7 @@ struct TodoDetailView: View {
                         Label("Project", systemImage: "folder")
                         Spacer()
                         if(todo.projectId != nil){
-                            Text(tasks.projectByIdNonNull(projectId: todo.projectId).name)
+                            Text(appData.projectByIdNonNull(projectId: todo.projectId).name)
                                 .opacity(0.6)
                         } else {
                             Text("None")
@@ -74,10 +75,15 @@ struct TodoDetailView: View {
                 }
             }
             Section(header: Text("Note")){
-                ScrollView {
-                    Text(todo.note)
-                                .padding()
-                        }
+//                ScrollView {
+//                    Text(todo.note)
+//                                .padding()
+//                        }
+                ForEach($appData.projects, id: \.id) { $project in
+                    NavigationLink(destination: ProjectDetailView(project: $project, appData: $appData)) {
+                            ProjectCardView(project: $project)
+                    }
+                }
             }
 //            Section(header: Text("History")) {
 //                if scrum.history.isEmpty {
@@ -123,5 +129,5 @@ struct TodoDetailView: View {
 }
 
 #Preview {
-    TodoDetailView(todo: .constant(Todo.sampleData[0]))
+    TodoDetailView(todo: .constant(Todo.sampleData[0]), appData: .constant(TasksStore.testableTaskStore.appData))
 }

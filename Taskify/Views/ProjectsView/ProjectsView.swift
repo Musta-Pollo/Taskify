@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ProjectsView: View {
-    @EnvironmentObject var tasks: TasksStore
+    @Binding var appData: AppData
     @State private var isPresentingNewProjectView = false
     var body: some View {
         NavigationStack {
             List {
-                ForEach($tasks.projects, id: \.self.wrappedValue) { $project in
-                        NavigationLink(destination: ProjectDetailView(project: $project)) {
+                ForEach($appData.projects) { $project in
+                    NavigationLink(destination: ProjectDetailView(project: $project, appData: $appData)) {
                             ProjectCardView(project: $project)
                     }
                 }
@@ -31,16 +31,16 @@ struct ProjectsView: View {
             }
         }
         .sheet(isPresented: $isPresentingNewProjectView) {
-            NewProjectSheet(isPresentingNewProjectView: $isPresentingNewProjectView)
+            NewProjectSheet( appData: $appData, isPresentingNewProjectView: $isPresentingNewProjectView)
         }
     }
     
     private func move(from source: IndexSet, to destination: Int) {
-        tasks.projects.move(fromOffsets: source, toOffset: destination)
+        appData.projects.move(fromOffsets: source, toOffset: destination)
     }
     
 }
 
 #Preview {
-    ProjectsView().environmentObject(TasksStore.testableTaskStore)
+    ProjectsView( appData: .constant(TasksStore.testableTaskStore.appData))
 }

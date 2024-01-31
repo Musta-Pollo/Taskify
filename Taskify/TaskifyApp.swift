@@ -14,16 +14,17 @@ struct TaskifyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AppView() {
+            AppView(appData: $store.appData) {
                 Task {
                     do {
-                        try await store.save()
+                        try await store.save(appDataA: store.appData)
                     } catch {
                         errorWrapper = ErrorWrapper(error: error,
                                                     guidance: "Try again later.")
                     }
                 }
             }
+            .environmentObject(store)
             .task {
                 do {
                     try await store.load()
@@ -38,7 +39,7 @@ struct TaskifyApp: App {
             } content: { wrapper in
                 ErrorView(errorWrapper: wrapper)
             }
-            .environmentObject(store)
+            
         }
     }
 }

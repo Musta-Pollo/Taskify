@@ -34,9 +34,9 @@ class TasksStore: ObservableObject {
         self.appData = appData
     }
     
-    func save() async throws {
+    func save(appDataA: AppData) async throws {
         let task = Task {
-            let appData = try JSONEncoder().encode(appData)
+            let appData = try JSONEncoder().encode(appDataA)
             let url = try Self.fileURL()
             try appData.write(to: url)
         }
