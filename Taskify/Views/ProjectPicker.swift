@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ProjectPicker: View {
     @Binding var selectedProjectId: UUID?
-    @EnvironmentObject var tasks: TasksStore
+    @Binding var appData: AppData
     
     
     var body: some View {
         Picker("Project", selection: $selectedProjectId) {
-            ForEach(tasks.projects.optionalProjects) { project in
+            ForEach(appData.projects.optionalProjects) { project in
                 
                 ProjectView(project: project.project)
                     .tag(project.id as UUID?)
@@ -26,6 +26,6 @@ struct ProjectPicker: View {
 
 struct ThemePicker_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectPicker(selectedProjectId: .constant(nil)).environmentObject(TasksStore())
+        ProjectPicker(selectedProjectId: .constant(nil), appData: .constant(TasksStore.testableTaskStore.appData))
     }
 }

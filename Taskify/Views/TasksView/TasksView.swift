@@ -28,7 +28,7 @@ struct TasksView: View {
             }
         }
         .sheet(isPresented: $isPresentingNewScrumView) {
-            NewTodoSheet(isPresentingNewTodoView: $isPresentingNewScrumView)
+            NewTodoSheet(appData: $appData, isPresentingNewTodoView: $isPresentingNewScrumView)
         }
     }
     

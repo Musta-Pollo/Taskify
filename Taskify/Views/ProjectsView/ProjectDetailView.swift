@@ -44,19 +44,14 @@ struct ProjectDetailView: View {
                     if appData.projectHistory(projectId: project.id).isEmpty {
                         Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
                     } else {
-////                        let projectHistories = tasks.projectHistory(projectId: project.id)
-////                        ForEach(projectHistories, id: \.id) { history in
-////                            if let index = tasks.history.firstIndex(where: { $0.id == history.id }) {
-////                                NavigationLink(destination: HistoryView(history: $tasks.history[index])) {
-////                                    Text(history.formattedDuration())
-////                                }
-////                            }
-////                        }
-////                        ForEach($tasks.projects) { $project in
-////                                NavigationLink(destination: ProjectDetailView(project: $project)) {
-////                                    ProjectCardView(project: $project)
-////                            }
-////                        }
+                        let projectHistories = appData.projectHistory(projectId: project.id)
+                        ForEach(projectHistories, id: \.id) { history in
+                            if let index = appData.history.firstIndex(where: { $0.id == history.id }) {
+                                NavigationLink(destination: HistoryView(history:  $appData.history[index])) {
+                                    Text(history.formattedDuration())
+                                }
+                            }
+                        }
                         
                     }
                 }

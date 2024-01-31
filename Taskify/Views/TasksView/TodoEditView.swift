@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodoEditView: View {
     @Binding var todo: Todo
-    @EnvironmentObject var tasks: TasksStore
+    @Binding var appData: AppData
 //    init(todo: Todo, tasks: TasksStore, hiddenDateTime: Date) {
 //        self.todo = todo
 //        self.tasks = tasks
@@ -19,7 +19,7 @@ struct TodoEditView: View {
         Form {
             Section(header: Text("Default Info")) {
                 TextField("Name", text: $todo.name)
-                ProjectPicker(selectedProjectId: $todo.projectId)
+                ProjectPicker(selectedProjectId: $todo.projectId, appData: .constant(TasksStore.testableTaskStore.appData))
                 PriorityPicker(selectedPriority: $todo.priority)
             }
             Section(header: Text("Deadline")) {
@@ -40,6 +40,6 @@ struct TodoEditView: View {
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoEditView(todo: .constant(Todo.sampleData[0])).environmentObject(TasksStore.testableTaskStore)
+        TodoEditView(todo: .constant(Todo.sampleData[0]), appData: .constant(TasksStore.testableTaskStore.appData))
     }
 }

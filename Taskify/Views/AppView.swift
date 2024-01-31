@@ -21,7 +21,6 @@ struct AppView: View {
                 }
                 .tag(0)
 
-            // Add additional tabs here
             ProjectsView(appData: $appData)
                 .tabItem {
                     Label("Projects", systemImage: "folder")

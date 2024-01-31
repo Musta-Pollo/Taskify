@@ -108,7 +108,7 @@ struct TodoDetailView: View {
         }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationStack {
-                TodoEditView(todo: $editingTodo)
+                TodoEditView(todo: $editingTodo, appData: $appData)
                     .navigationTitle(todo.name)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
