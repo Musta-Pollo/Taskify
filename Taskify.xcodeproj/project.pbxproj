@@ -12,6 +12,9 @@
 		F23287542B6A399F00ED9AB6 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23287532B6A399F00ED9AB6 /* AppData.swift */; };
 		F23287562B6A3ED700ED9AB6 /* NewProjectSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23287552B6A3ED700ED9AB6 /* NewProjectSheet.swift */; };
 		F23287582B6A496400ED9AB6 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23287572B6A496400ED9AB6 /* HistoryView.swift */; };
+		F234F60E2B6B762700BC9157 /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F60D2B6B762700BC9157 /* ActivityTracker.swift */; };
+		F234F6112B6B7AA700BC9157 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F6102B6B7AA700BC9157 /* TimerView.swift */; };
+		F234F6132B6B82F500BC9157 /* DurationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F6122B6B82F500BC9157 /* DurationPickerView.swift */; };
 		F2A68E822B68C87700AA219B /* TaskifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68E812B68C87700AA219B /* TaskifyApp.swift */; };
 		F2A68E842B68C87700AA219B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68E832B68C87700AA219B /* ContentView.swift */; };
 		F2A68E862B68C87800AA219B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A68E852B68C87800AA219B /* Assets.xcassets */; };
@@ -75,6 +78,9 @@
 		F23287532B6A399F00ED9AB6 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		F23287552B6A3ED700ED9AB6 /* NewProjectSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectSheet.swift; sourceTree = "<group>"; };
 		F23287572B6A496400ED9AB6 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		F234F60D2B6B762700BC9157 /* ActivityTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
+		F234F6102B6B7AA700BC9157 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		F234F6122B6B82F500BC9157 /* DurationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationPickerView.swift; sourceTree = "<group>"; };
 		F2A68E7E2B68C87700AA219B /* Taskify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taskify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A68E812B68C87700AA219B /* TaskifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskifyApp.swift; sourceTree = "<group>"; };
 		F2A68E832B68C87700AA219B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F234F60F2B6B7A8C00BC9157 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				F234F6102B6B7AA700BC9157 /* TimerView.swift */,
+				F234F6122B6B82F500BC9157 /* DurationPickerView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		F2A68E752B68C87700AA219B = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +229,7 @@
 				F232874F2B6A354D00ED9AB6 /* ColorType.swift */,
 				F23287512B6A380200ED9AB6 /* History.swift */,
 				F23287532B6A399F00ED9AB6 /* AppData.swift */,
+				F234F60D2B6B762700BC9157 /* ActivityTracker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +237,7 @@
 		F2A68EAC2B68D20000AA219B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F234F60F2B6B7A8C00BC9157 /* Timer */,
 				F2A68EE32B696FAF00AA219B /* ProjectsView */,
 				F2A68EE12B696F7500AA219B /* TasksView */,
 				F2A68EB72B68D65D00AA219B /* ErrorView.swift */,
@@ -432,11 +449,13 @@
 				F2A68EB42B68D51C00AA219B /* TasksView.swift in Sources */,
 				F2A68EED2B69728200AA219B /* ColorView.swift in Sources */,
 				F23287502B6A354D00ED9AB6 /* ColorType.swift in Sources */,
+				F234F6112B6B7AA700BC9157 /* TimerView.swift in Sources */,
 				F2A68EAE2B68D21100AA219B /* TasksStore.swift in Sources */,
 				F2A68E842B68C87700AA219B /* ContentView.swift in Sources */,
 				F2A68EB22B68D26A00AA219B /* Priority.swift in Sources */,
 				F2A68E822B68C87700AA219B /* TaskifyApp.swift in Sources */,
 				F2A68EEB2B69724200AA219B /* ColorPicker.swift in Sources */,
+				F234F60E2B6B762700BC9157 /* ActivityTracker.swift in Sources */,
 				F23287562B6A3ED700ED9AB6 /* NewProjectSheet.swift in Sources */,
 				F2A68ECF2B69111400AA219B /* DeadlinePickerView.swift in Sources */,
 				F2A68EE72B69707F00AA219B /* ProjectTrackingView.swift in Sources */,
@@ -446,6 +465,7 @@
 				F2A68EC92B68ECD600AA219B /* ColorExtension.swift in Sources */,
 				F2A68ED52B6939A300AA219B /* DateExtension.swift in Sources */,
 				F2A68EC02B68DA3500AA219B /* Project.swift in Sources */,
+				F234F6132B6B82F500BC9157 /* DurationPickerView.swift in Sources */,
 				F2A68ED92B695C8800AA219B /* AppView.swift in Sources */,
 				F2A68EC62B68EAEA00AA219B /* ProjectView.swift in Sources */,
 				F2A68EC22B68E49F00AA219B /* TodoEditView.swift in Sources */,

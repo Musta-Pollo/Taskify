@@ -24,9 +24,18 @@ extension AppData {
         return projects.first(where: { $0.id == projectId })
     }
     
+    func projectByIdIndex(projectId: UUID?) -> Int? {
+        return projects.firstIndex(where: { $0.id == projectId })
+    }
+    
     func projectByIdNonNull(projectId: UUID?) -> Project {
         return projectById(projectId: projectId) ?? .sampleProjects[0]
     }
+    
+    func projectByIdNonNullIndex(projectId: UUID?) -> Int {
+        return projectByIdIndex(projectId: projectId) ?? 0
+    }
+    
     
     
     func projectByIdColor(projectId: UUID?) -> Color?{

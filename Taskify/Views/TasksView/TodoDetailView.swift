@@ -17,7 +17,8 @@ struct TodoDetailView: View {
     var body: some View {
         List {
             Section(header: Text("Basic Info")) {
-                NavigationLink(destination: TaskTrackingView(todo: $todo)) {
+                let projectIndex = appData.projectByIdIndex(projectId: todo.projectId)
+                NavigationLink(destination: TimerView(task: $todo, appData: $appData, project: $appData.projects[projectIndex])) {
                     Label("Track Task", systemImage: "play")
                         .font(.headline)
                         .foregroundColor(.accentColor)
