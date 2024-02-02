@@ -15,6 +15,14 @@
 		F234F60E2B6B762700BC9157 /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F60D2B6B762700BC9157 /* ActivityTracker.swift */; };
 		F234F6112B6B7AA700BC9157 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F6102B6B7AA700BC9157 /* TimerView.swift */; };
 		F234F6132B6B82F500BC9157 /* DurationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F6122B6B82F500BC9157 /* DurationPickerView.swift */; };
+		F234F6162B6B943700BC9157 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = F234F6152B6B943700BC9157 /* UICircularProgressRing */; };
+		F234F6182B6B979A00BC9157 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F6172B6B979A00BC9157 /* CircularProgressView.swift */; };
+		F234F61B2B6BC46000BC9157 /* EditHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F61A2B6BC46000BC9157 /* EditHistoryView.swift */; };
+		F234F61D2B6BC6B500BC9157 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F61C2B6BC6B500BC9157 /* BindingExtension.swift */; };
+		F234F6202B6BC6FE00BC9157 /* TaskPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F61F2B6BC6FE00BC9157 /* TaskPicker.swift */; };
+		F234F6222B6BC7F600BC9157 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F6212B6BC7F600BC9157 /* TaskView.swift */; };
+		F234F6242B6BDF5600BC9157 /* NewHistorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234F6232B6BDF5600BC9157 /* NewHistorySheet.swift */; };
+		F234F6262B6BE6E000BC9157 /* res_goodresult_82807.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F234F6252B6BE6E000BC9157 /* res_goodresult_82807.mp3 */; };
 		F2A68E822B68C87700AA219B /* TaskifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68E812B68C87700AA219B /* TaskifyApp.swift */; };
 		F2A68E842B68C87700AA219B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A68E832B68C87700AA219B /* ContentView.swift */; };
 		F2A68E862B68C87800AA219B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A68E852B68C87800AA219B /* Assets.xcassets */; };
@@ -81,6 +89,13 @@
 		F234F60D2B6B762700BC9157 /* ActivityTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
 		F234F6102B6B7AA700BC9157 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		F234F6122B6B82F500BC9157 /* DurationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationPickerView.swift; sourceTree = "<group>"; };
+		F234F6172B6B979A00BC9157 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F234F61A2B6BC46000BC9157 /* EditHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHistoryView.swift; sourceTree = "<group>"; };
+		F234F61C2B6BC6B500BC9157 /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
+		F234F61F2B6BC6FE00BC9157 /* TaskPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPicker.swift; sourceTree = "<group>"; };
+		F234F6212B6BC7F600BC9157 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		F234F6232B6BDF5600BC9157 /* NewHistorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHistorySheet.swift; sourceTree = "<group>"; };
+		F234F6252B6BE6E000BC9157 /* res_goodresult_82807.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = res_goodresult_82807.mp3; path = Taskify/res_goodresult_82807.mp3; sourceTree = SOURCE_ROOT; };
 		F2A68E7E2B68C87700AA219B /* Taskify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taskify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A68E812B68C87700AA219B /* TaskifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskifyApp.swift; sourceTree = "<group>"; };
 		F2A68E832B68C87700AA219B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F234F6162B6B943700BC9157 /* UICircularProgressRing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +170,28 @@
 			children = (
 				F234F6102B6B7AA700BC9157 /* TimerView.swift */,
 				F234F6122B6B82F500BC9157 /* DurationPickerView.swift */,
+				F234F6172B6B979A00BC9157 /* CircularProgressView.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		F234F6192B6BC44900BC9157 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F23287572B6A496400ED9AB6 /* HistoryView.swift */,
+				F234F61A2B6BC46000BC9157 /* EditHistoryView.swift */,
+				F234F6232B6BDF5600BC9157 /* NewHistorySheet.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		F234F61E2B6BC6E900BC9157 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				F2A68EC32B68EA6100AA219B /* ProjectPicker.swift */,
+				F234F61F2B6BC6FE00BC9157 /* TaskPicker.swift */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 		F2A68E752B68C87700AA219B = {
@@ -237,12 +273,12 @@
 		F2A68EAC2B68D20000AA219B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F234F61E2B6BC6E900BC9157 /* Pickers */,
+				F234F6192B6BC44900BC9157 /* History */,
 				F234F60F2B6B7A8C00BC9157 /* Timer */,
 				F2A68EE32B696FAF00AA219B /* ProjectsView */,
 				F2A68EE12B696F7500AA219B /* TasksView */,
 				F2A68EB72B68D65D00AA219B /* ErrorView.swift */,
-				F2A68EC32B68EA6100AA219B /* ProjectPicker.swift */,
-				F2A68EC52B68EAEA00AA219B /* ProjectView.swift */,
 				F2A68ECA2B690DF300AA219B /* PriorityPicker.swift */,
 				F2A68ECC2B690EA600AA219B /* PriorityView.swift */,
 				F2A68ECE2B69111400AA219B /* DeadlinePickerView.swift */,
@@ -252,7 +288,6 @@
 				F2A68ED82B695C8800AA219B /* AppView.swift */,
 				F2A68EEA2B69724200AA219B /* ColorPicker.swift */,
 				F2A68EEC2B69728200AA219B /* ColorView.swift */,
-				F23287572B6A496400ED9AB6 /* HistoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +298,7 @@
 				F2A68EC82B68ECD600AA219B /* ColorExtension.swift */,
 				F2A68ED42B6939A300AA219B /* DateExtension.swift */,
 				F2A68EDA2B69600300AA219B /* AvPlayerExtension.swift */,
+				F234F61C2B6BC6B500BC9157 /* BindingExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +306,7 @@
 		F2A68EDC2B69601D00AA219B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F234F6252B6BE6E000BC9157 /* res_goodresult_82807.mp3 */,
 				F2A68EDD2B69610500AA219B /* congrats.wav */,
 			);
 			path = Resources;
@@ -283,6 +320,7 @@
 				F2A68EBD2B68D87400AA219B /* NewTodoSheet.swift */,
 				F2A68EC12B68E49F00AA219B /* TodoEditView.swift */,
 				F2A68EB32B68D51C00AA219B /* TasksView.swift */,
+				F234F6212B6BC7F600BC9157 /* TaskView.swift */,
 			);
 			path = TasksView;
 			sourceTree = "<group>";
@@ -290,6 +328,7 @@
 		F2A68EE32B696FAF00AA219B /* ProjectsView */ = {
 			isa = PBXGroup;
 			children = (
+				F2A68EC52B68EAEA00AA219B /* ProjectView.swift */,
 				F2A68EDF2B696F6200AA219B /* ProjectsView.swift */,
 				F2A68EE42B69700200AA219B /* ProjectDetailView.swift */,
 				F2A68EE62B69707F00AA219B /* ProjectTrackingView.swift */,
@@ -316,6 +355,9 @@
 			dependencies = (
 			);
 			name = Taskify;
+			packageProductDependencies = (
+				F234F6152B6B943700BC9157 /* UICircularProgressRing */,
+			);
 			productName = Taskify;
 			productReference = F2A68E7E2B68C87700AA219B /* Taskify.app */;
 			productType = "com.apple.product-type.application";
@@ -388,6 +430,9 @@
 				Base,
 			);
 			mainGroup = F2A68E752B68C87700AA219B;
+			packageReferences = (
+				F234F6142B6B943700BC9157 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
+			);
 			productRefGroup = F2A68E7F2B68C87700AA219B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -407,6 +452,7 @@
 				F2A68E892B68C87800AA219B /* Preview Assets.xcassets in Resources */,
 				F2A68EDE2B69610500AA219B /* congrats.wav in Resources */,
 				F2A68E862B68C87800AA219B /* Assets.xcassets in Resources */,
+				F234F6262B6BE6E000BC9157 /* res_goodresult_82807.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,12 +488,15 @@
 				F2A68ECD2B690EA600AA219B /* PriorityView.swift in Sources */,
 				F2A68EBA2B68D76300AA219B /* TodoDetailView.swift in Sources */,
 				F2A68EF12B69786C00AA219B /* ProjectCardView.swift in Sources */,
+				F234F6242B6BDF5600BC9157 /* NewHistorySheet.swift in Sources */,
 				F2A68EB62B68D60F00AA219B /* ErrorWrapper.swift in Sources */,
 				F2A68ED72B694DB200AA219B /* TaskTrackingView.swift in Sources */,
 				F2A68ED12B69139B00AA219B /* DatePickDateOptionalView.swift in Sources */,
 				F2A68EBC2B68D7DE00AA219B /* TodoCardView.swift in Sources */,
 				F2A68EB42B68D51C00AA219B /* TasksView.swift in Sources */,
+				F234F6202B6BC6FE00BC9157 /* TaskPicker.swift in Sources */,
 				F2A68EED2B69728200AA219B /* ColorView.swift in Sources */,
+				F234F6222B6BC7F600BC9157 /* TaskView.swift in Sources */,
 				F23287502B6A354D00ED9AB6 /* ColorType.swift in Sources */,
 				F234F6112B6B7AA700BC9157 /* TimerView.swift in Sources */,
 				F2A68EAE2B68D21100AA219B /* TasksStore.swift in Sources */,
@@ -464,13 +513,16 @@
 				F2A68EE02B696F6200AA219B /* ProjectsView.swift in Sources */,
 				F2A68EC92B68ECD600AA219B /* ColorExtension.swift in Sources */,
 				F2A68ED52B6939A300AA219B /* DateExtension.swift in Sources */,
+				F234F6182B6B979A00BC9157 /* CircularProgressView.swift in Sources */,
 				F2A68EC02B68DA3500AA219B /* Project.swift in Sources */,
+				F234F61D2B6BC6B500BC9157 /* BindingExtension.swift in Sources */,
 				F234F6132B6B82F500BC9157 /* DurationPickerView.swift in Sources */,
 				F2A68ED92B695C8800AA219B /* AppView.swift in Sources */,
 				F2A68EC62B68EAEA00AA219B /* ProjectView.swift in Sources */,
 				F2A68EC22B68E49F00AA219B /* TodoEditView.swift in Sources */,
 				F2A68EC42B68EA6100AA219B /* ProjectPicker.swift in Sources */,
 				F23287542B6A399F00ED9AB6 /* AppData.swift in Sources */,
+				F234F61B2B6BC46000BC9157 /* EditHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +852,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F234F6142B6B943700BC9157 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/luispadron/UICircularProgressRing.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F234F6152B6B943700BC9157 /* UICircularProgressRing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F234F6142B6B943700BC9157 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */;
+			productName = UICircularProgressRing;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2A68E762B68C87700AA219B /* Project object */;
 }

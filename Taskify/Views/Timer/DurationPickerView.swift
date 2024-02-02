@@ -15,7 +15,17 @@ struct DurationPickerView: View {
 
     var body: some View {
         NavigationView {
+            
             VStack {
+                HStack{
+                    Text("Hour")
+                        .padding(.trailing, 40)
+                        .font(.caption)
+                        .opacity(0.6)
+                    Text("Minute")
+                        .font(.caption)
+                        .opacity(0.6)
+                }
                 DatePicker(
                     "Duration",
                     selection: $selectedDate,
@@ -32,6 +42,7 @@ struct DurationPickerView: View {
                     presentationMode.wrappedValue.dismiss()
                 }
                 .padding()
+                .buttonStyle(.bordered)
             }
             .navigationTitle("Select Duration")
             .navigationBarItems(leading: Button("Cancel") {

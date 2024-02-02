@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct TaskView: View {
+    var task: Todo?
+    var appData: AppData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let project = appData.projectById(projectId: task?.projectId)
+        HStack {
+            Image(systemName: "circle")
+                .foregroundColor(project?.color.color ?? .gray)
+                .padding(.trailing)
+            Text(task?.name ?? "None")
+            
+        }
     }
 }
 
-#Preview {
-    TaskView()
+struct TaskView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProjectView(project: Project.sampleProjects[0])
+    }
 }

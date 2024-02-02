@@ -13,4 +13,10 @@ extension AVPlayer {
         guard let url = Bundle.main.url(forResource: "congrats", withExtension: "wav") else { fatalError("Failed to find sound file.") }
         return AVPlayer(url: url)
     }()
+    
+    static let timerEndPlayer: AVPlayer = {
+        guard let url = Bundle.main.url(forResource: "res_goodresult_82807", withExtension: "mp3") else { fatalError("Failed to find sound file.") }
+        return AVPlayer(url: url)
+    }()
+    
 }

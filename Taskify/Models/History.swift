@@ -9,12 +9,13 @@ import Foundation
 
 struct History: Identifiable, Codable, Hashable{
     let id: UUID
-    let start: Date
-    let end: Date
-    let projectId: UUID
-    let taskId: UUID?
+    var start: Date
+    var end: Date
+    var projectId: UUID?
+    var taskId: UUID?
 
-   init(start: Date, end: Date, projectId: UUID, taskId: UUID? = nil) {
+   init(start: Date, end: Date, projectId: UUID? = nil, taskId: UUID? = nil) {
+       assert(projectId != nil || taskId != nil, "At least one of projectId or taskId must be non-nil")
        self.id = UUID() // Generate a unique ID for each history
        self.start = start
        self.end = end
@@ -45,6 +46,9 @@ struct History: Identifiable, Codable, Hashable{
 }
 
 extension History {
+    static var emptyHistory: History {
+        return History(start: Date.now, end: Date.now.addingTimeInterval(60 * 60), projectId: UUID())
+    }
     static let sampleHistories: [History] = [
         History(start: Date(timeIntervalSinceNow: -3600 * 5),  // 5 hours ago
                 end: Date(timeIntervalSinceNow: -3600 * 4),    // 4 hours ago

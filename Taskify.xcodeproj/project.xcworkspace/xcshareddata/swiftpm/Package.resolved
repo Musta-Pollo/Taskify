@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "uicircularprogressring",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/luispadron/UICircularProgressRing.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5b00b9b42b0a7db6f8239d526d7251eef9a63dcd"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -6,75 +6,114 @@
 //
 
 import SwiftUI
+import UICircularProgressRing
 
 struct TimerView: View {
     @Binding var appData: AppData
-    @Binding var project: Project
-    @Binding var task: Todo?
-    
-    @StateObject private var timerManager: ActivityTracker;
+    var project: Project?
+    var task: Todo?
+    @Environment(\.presentationMode) var presentationMode
+    @StateObject private var timerManager = ActivityTracker(currentProject: Project.sampleProjects[0], appData: .constant(TasksStore.testableTaskStore.appData)) // Example initialization
     @State private var isPresentingDurationPicker = false
+    @State private var isShowingExitConfirmation = false
+
     
-    init(appData: Binding<AppData>, project: Binding<Project>, task: Binding<Todo?> = .constant(nil), timerManager: ActivityTracker? = nil, isPresentingDurationPicker: Bool = false) {
+    init(appData: Binding<AppData>, project: Project?, task: Todo? = nil, isPresentingDurationPicker: Bool = false) {
         self._appData = appData
-        self._project = project
-        self._task = task
-        self._timerManager = StateObject(wrappedValue: ActivityTracker(currentProject: project.wrappedValue, currentTask: task.wrappedValue))
+        self.project = project
+        self.task = task
+        self._timerManager = StateObject(wrappedValue: ActivityTracker(currentProject: project, currentTask: task, appData: appData))
         self.isPresentingDurationPicker = isPresentingDurationPicker
     }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ZStack {
-                    ProgressView(value: timerManager.progress, total: 1)
-                        .progressViewStyle(.circular)
-                        .scaleEffect(3) // Adjust the scale as needed
-                    
+        VStack {
+            ZStack {
+                CircularProgressView(progress: timerManager.progress, progressColor: project?.color.color ?? .gray) {
                     VStack {
-                        // Display the time string
                         Text(timerManager.timerString)
                             .font(.largeTitle)
                         
-                        // Button to change the tracked duration
                         Button(action: {
                             isPresentingDurationPicker = true
                         }) {
                             Text("Change Duration")
-                                .font(.body)
+                                .font(.caption)
                         }
                         .padding(.top, 4)
                     }
                 }
-                .frame(width: 200, height: 200) // Adjust size as needed
-                
-                // Display the appropriate buttons based on the timer state
-                if timerManager.isRunning {
+                .padding([.leading, .trailing], 50)
+            }
+            
+            Spacer() // This will push the content above and below it to the edges
+            
+            if timerManager.isRunning {
+                HStack {
                     Button("Pause") {
                         timerManager.pause()
                     }
-                    Button("Stop") {
+                    .buttonStyle(.bordered)
+                    .padding(.trailing)
+                    
+                    Button("Stop ") {
                         timerManager.stop()
-                        // Logic to handle timer stop action
                     }
-                } else {
-                    Button("Start") {
-                        timerManager.start()
+                    .buttonStyle(.bordered)
+                }
+            } else {
+                Button("Start") {
+                    timerManager.start()
+                }
+                .buttonStyle(.bordered)
+            }
+        }
+        .padding([.top, .bottom], 125)
+        .sheet(isPresented: $isPresentingDurationPicker) {
+            DurationPickerView(selectedDuration: $timerManager.trackedDuration)
+        }
+        .confirmationDialog("Leave Tracking?", isPresented: $isShowingExitConfirmation, titleVisibility: .visible) {
+            Button("Leave", role: .destructive) {
+                timerManager.stop()
+                presentationMode.wrappedValue.dismiss()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("You have an ongoing tracking session. Leaving this page will stop the tracking.")
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    if timerManager.isRunning {
+                        isShowingExitConfirmation = true
+                    } else {
+                        presentationMode.wrappedValue.dismiss()
                     }
+                }) {
+                    Image(systemName: "chevron.left")
+                    Text("Back")
                 }
             }
-            .sheet(isPresented: $isPresentingDurationPicker) {
-                // Your custom duration picker view
-                DurationPickerView(selectedDuration: $timerManager.trackedDuration)
-            }
-            .navigationTitle("Timer")
-            .navigationBarItems(leading: Button("Back") {
-                // Action to navigate back
-            })
         }
+        .navigationBarHidden(false)
+        .accentColor(project?.color.color ?? .gray)
+        .navigationBarBackButtonHidden()
+        .navigationTitle(task == nil ? project!.name : project == nil ? task!.name : (task!.name + ": " + project!.name))
+//        .navigationBarItems(leading: Button("Back") {
+//            // Action to navigate back
+//        })
     }
 }
 
-#Preview {
-    TimerView(appData: .constant(TasksStore.testableTaskStore.appData), project: .constant(Project.sampleProjects[0]))
+struct TimerView_Previews: PreviewProvider {
+    static var previews: some View {
+        TimerView(appData: .constant(AppData()), project: Project.sampleProjects[0], task: nil)
+    }
 }
+
+
+#Preview {
+    TimerView(appData: .constant(TasksStore.testableTaskStore.appData), project: Project.sampleProjects[0])
+}
+
+

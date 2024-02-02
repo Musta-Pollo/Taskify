@@ -3,23 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ProjectsView.move(from:to:):ProjectsView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "tasks.projects.move(fromOffsets: source, toOffset: destination)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in closure #2 in closure #1 in ProjectDetailView.body.getter:ProjectDetailView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "$tasks.history.first(where: { h in h.id == history.id})">
-            </PersistentString>
-            <PersistentString
-               value = "tasks.history">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "closure #1 in closure #2 in closure #1 in EditHistoryView.body.getter:EditHistoryView.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in closure #1 in closure #2 in closure #1 in ProjectDetailView.body.getter:ProjectDetailView.swift">
@@ -39,10 +23,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "static Color.predefinedIdColors.getter:ColorExtension.swift">
+         contextName = "closure #1 in closure #1 in closure #1 in TimerView.body.getter:TimerView.swift">
          <PersistentStrings>
             <PersistentString
-               value = "predefinedIdColors[0].color == .red">
+               value = "timerManager.progress">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -54,6 +38,93 @@
             </PersistentString>
             <PersistentString
                value = "self.toRGB">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in closure #1 in closure #1 in closure #3 in HistoryView.body.getter:HistoryView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TimerView.body.getter:TimerView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "project">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Color.predefinedIdColors.getter:ColorExtension.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "predefinedIdColors[0].color == .red">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ActivityTracker.progress.getter:ActivityTracker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " min(elapsedTime / trackedDuration, 1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppData.taskHistory(taskId:):AppData.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "history">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ProjectCardView.body.getter:ProjectCardView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ProjectView.body.getter:ProjectView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #2 in closure #1 in ProjectDetailView.body.getter:ProjectDetailView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "$tasks.history.first(where: { h in h.id == history.id})">
+            </PersistentString>
+            <PersistentString
+               value = "tasks.history">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ActivityTracker.createHistoryRecord(start:end:):ActivityTracker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " appData.history">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProjectsView.move(from:to:):ProjectsView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tasks.projects.move(fromOffsets: source, toOffset: destination)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in ProjectPicker.body.getter:ProjectPicker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "project.id as UUID?">
+            </PersistentString>
+            <PersistentString
+               value = "canPickNone">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProjectPicker.body.getter:ProjectPicker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appData.projects.optionalProjects">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -14,11 +14,13 @@ struct TodoDetailView: View {
     @State private var editingTodo = Todo.emptyTodo
     @State private var isPresentingEditView = false
     
+    @State var isPresentingHistoryAddView = false
+    
     var body: some View {
         List {
             Section(header: Text("Basic Info")) {
-                let projectIndex = appData.projectByIdIndex(projectId: todo.projectId)
-                NavigationLink(destination: TimerView(task: $todo, appData: $appData, project: $appData.projects[projectIndex])) {
+                let project = appData.projectById(projectId: todo.projectId)
+                NavigationLink(destination: TimerView(appData: $appData,  project: project,  task: todo)) {
                     Label("Track Task", systemImage: "play")
                         .font(.headline)
                         .foregroundColor(.accentColor)
@@ -76,30 +78,37 @@ struct TodoDetailView: View {
                 }
             }
             Section(header: Text("Note")){
-//                ScrollView {
-//                    Text(todo.note)
-//                                .padding()
-//                        }
-                ForEach($appData.projects, id: \.id) { $project in
-                    NavigationLink(destination: ProjectDetailView(project: $project, appData: $appData)) {
-                            ProjectCardView(project: $project)
-                    }
+                ScrollView {
+                    Text(todo.note)
+                        .padding()
                 }
             }
-//            Section(header: Text("History")) {
-//                if scrum.history.isEmpty {
-//                    Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
-//                }
-//                ForEach(scrum.history) { history in
-//                    NavigationLink(destination: HistoryView(history: history)) {
-//                        HStack {
-//                            Image(systemName: "calendar")
-//                            Text(history.date, style: .date)
-//                        }
-//                    }
-//                }
-//            }
+            Section(header: HStack {
+                Text("History")
+                Spacer()
+                Button(action: {
+                    isPresentingHistoryAddView = true
+                }){
+                    Image(systemName: "plus")
+                                        .foregroundColor(.blue)
+                }
+            }) {
+                if appData.taskHistory(taskId: todo.id).isEmpty {
+                    Label("No history yet", systemImage: "calendar.badge.exclamationmark")
+                } else {
+                    let taskHistories = appData.taskHistory(taskId: todo.id)
+                    ForEach(taskHistories, id: \.id) { history in
+                        if let index = appData.history.firstIndex(where: { $0.id == history.id }) {
+                            NavigationLink(destination: HistoryView(history:  $appData.history[index], appData: $appData)) {
+                                Text(history.formattedDuration())
+                            }
+                        }
+                    }
+                    
+                }
+            }
         }
+       
         .navigationTitle(todo.name)
         .toolbar {
             Button("Edit") {
@@ -125,6 +134,10 @@ struct TodoDetailView: View {
                         }
                     }
             }
+        }
+        .sheet(isPresented: $isPresentingHistoryAddView) {
+            let project = appData.projectById(projectId: todo.projectId)
+            NewHistorySheet(appData: $appData, isPresentingNewHistoryView: $isPresentingHistoryAddView, initialProject: project, initialTask: todo)
         }
     }
 }

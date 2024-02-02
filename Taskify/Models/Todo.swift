@@ -58,6 +58,9 @@ extension Todo {
             Todo(name: "Dental Checkup", priority: .high, dateTime: Date(timeIntervalSinceNow: 900000)), // 10.4 days from now
             Todo(name: "Call Parents", priority: .none, dateTime: Date(timeIntervalSinceNow: 1209600)) // 14 days from now
         ]
+    var optionalTask: OptionalTask{
+        return OptionalTask(task: self)
+    }
     
 }
 
@@ -93,3 +96,23 @@ extension Binding<[Todo]> {
             )
         }
 }
+
+
+
+struct OptionalTask {
+    let task: Todo?
+}
+
+extension OptionalTask: Identifiable {
+    var id: UUID { task?.id ?? UUID() }
+}
+
+extension [Todo]{
+    func optionalTasksForProjectId(projectId: UUID?) -> [OptionalTask]{
+        return  [OptionalTask(task: nil)] + self.filter({$0.projectId == projectId}).map({$0.optionalTask})
+    }
+    func optionalTasksWithoutNone(projectId: UUID?) -> [OptionalTask]{
+        return self.filter({$0.projectId == projectId}).map({$0.optionalTask})
+    }
+}
+

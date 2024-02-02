@@ -19,12 +19,14 @@ struct ProjectDetailView: View {
     @Binding var appData: AppData
     @State private var editingProject = Project.sampleProjects[0]
     @State private var isPresentingEditView = false
+    
+    @State var isPresentingHistoryAddView = false
 
     var body: some View {
         NavigationStack {
             List {
                 Section(header: Text("Basic Info")) {
-                    NavigationLink(destination: ProjectTrackingView(project: $project)) {
+                    NavigationLink(destination: TimerView(appData: $appData, project: project)) {
                         Label("Track Project", systemImage: "play")
                             .font(.headline)
                             .foregroundColor(.accentColor)
@@ -40,14 +42,23 @@ struct ProjectDetailView: View {
                     }
                 }
 
-                Section(header: Text("History")) {
+                Section(header: HStack {
+                    Text("History")
+                    Spacer()
+                    Button(action: {
+                        isPresentingHistoryAddView = true
+                    }){
+                        Image(systemName: "plus")
+                                            .foregroundColor(.blue)
+                    }
+                }) {
                     if appData.projectHistory(projectId: project.id).isEmpty {
                         Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
                     } else {
                         let projectHistories = appData.projectHistory(projectId: project.id)
                         ForEach(projectHistories, id: \.id) { history in
                             if let index = appData.history.firstIndex(where: { $0.id == history.id }) {
-                                NavigationLink(destination: HistoryView(history:  $appData.history[index])) {
+                                NavigationLink(destination: HistoryView(history:  $appData.history[index], appData: $appData)) {
                                     Text(history.formattedDuration())
                                 }
                             }
@@ -63,6 +74,7 @@ struct ProjectDetailView: View {
                     editingProject = project
                 }
             }
+            
             .sheet(isPresented: $isPresentingEditView) {
                 NavigationStack {
                     ProjectEditView(project: $editingProject, appData: $appData)
@@ -81,6 +93,9 @@ struct ProjectDetailView: View {
                             }
                         }
                 }
+            }
+            .sheet(isPresented: $isPresentingHistoryAddView) {
+                NewHistorySheet(appData: $appData, isPresentingNewHistoryView: $isPresentingHistoryAddView, initialProject: project)
             }
         }
     }

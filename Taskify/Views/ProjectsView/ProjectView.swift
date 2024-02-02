@@ -13,7 +13,7 @@ struct ProjectView: View {
     var body: some View {
         HStack {
             Image(systemName: "circle.fill")
-                .foregroundColor(project?.color.color)
+                .foregroundColor(project?.color.color ?? .gray)
                 .padding(.trailing)
             Text(project?.name ?? "None")
             

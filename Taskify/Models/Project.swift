@@ -30,6 +30,7 @@ extension Project {
     }
     
     static let sampleProjects: [Project] = [
+        Project(id: UUID(uuidString: "123e4567-e89b-12d3-a456-426614174003")!, name: "Inbox", color: ColorType.gray),
         Project(id: UUID(uuidString: "123e4567-e89b-12d3-a456-426614174000")!, name: "Work", color: ColorType.red),
         Project(id: UUID(uuidString: "123e4567-e89b-12d3-a456-426614174001")!, name: "Eating", color: ColorType.blue),
         Project(id: UUID(uuidString: "123e4567-e89b-12d3-a456-426614174002")!, name: "Cleaning", color: ColorType.orange)
@@ -54,7 +55,11 @@ extension [Project]{
     var optionalProjects : [OptionalProject]{
         return  [OptionalProject(project: nil)] + self.map({$0.optionalProject})
     }
+    var optionalProjectsWithoutNone : [OptionalProject]{
+        return  self.map({$0.optionalProject})
+    }
 }
+
 
 
 struct OptionalProject {
@@ -63,4 +68,8 @@ struct OptionalProject {
 
 extension OptionalProject: Identifiable {
     var id: UUID { project?.id ?? UUID() }
+    
+    var projectId: UUID? {
+        return project?.id
+    }
 }
